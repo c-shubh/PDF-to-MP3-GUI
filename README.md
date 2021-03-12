@@ -5,6 +5,7 @@
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
+* [Snapshot](#snapshots)
 
 ## General info
 - This is a GUI based project that converts a PDF to MP3 format, made using TKinter.
@@ -14,3 +15,4 @@
 ## Technologies
 Project is created with:
 * Python 3.8.3
+
