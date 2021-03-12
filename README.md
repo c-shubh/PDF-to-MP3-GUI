@@ -1,6 +1,6 @@
 # PDF-to-MP3-GUI
 
-## Hi! This is my first repository on Github :smile:
+#### Hi! This is my first repository on Github :smile:
 
 ## Table of contents
 * [General info](#general-info)
@@ -14,4 +14,3 @@
 ## Technologies
 Project is created with:
 * Python 3.8.3
-
