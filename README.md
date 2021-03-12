@@ -1,6 +1,6 @@
 # PDF-to-MP3-GUI
 
-# Hi! This is my first repository on Github.
+## Hi! This is my first repository on Github :smile:
 
 ## Table of contents
 * [General info](#general-info)
