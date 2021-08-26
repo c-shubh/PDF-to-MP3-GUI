@@ -14,3 +14,9 @@
 ## Technologies
 Project is created with:
 * Python 3.8.3
+
+## Screenshots
+![Image description](./Screenshots/Screenshot_1.PNG)
+![Image description](./Screenshots/Screenshot_2.PNG)
+![Image description](./Screenshots/Screenshot_3.PNG)
+![Image description](./Screenshots/Screenshot_4.PNG)
