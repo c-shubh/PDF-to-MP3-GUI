@@ -1,5 +1,4 @@
 from Model import Model
-import os
 
 
 class Controller:
@@ -17,12 +16,17 @@ class Controller:
 
         returns: void
         """
-        self.model.saveMp3(self.model.extractTextFromPdf(
-            filePath).replace('\n', ' '), voice, rate, targetPath)
+        self.model.saveMp3(
+            self.model.extractTextFromPdf(filePath).replace("\n", " "),
+            voice,
+            rate,
+            targetPath,
+        )
 
     def saveMp3FromTextFile(self, voice, rate, filePath, targetPath):
-        self.model.saveMp3(self.model.extractTextFromTextFile(
-            filePath), voice, rate, targetPath)
+        self.model.saveMp3(
+            self.model.extractTextFromTextFile(filePath), voice, rate, targetPath
+        )
 
     def saveMp3FromInputText(self, voice, rate, textData, targetPath):
         self.model.saveMp3(textData, voice, rate, targetPath)
@@ -34,8 +38,7 @@ class Controller:
 
         returns: void
         """
-        self.model.saveText(
-            self.model.extractTextFromPdf(filePath), targetPath)
+        self.model.saveText(self.model.extractTextFromPdf(filePath), targetPath)
 
     def saveTextFromInput(self, textData, targetPath):
         self.model.saveText(textData, targetPath)

@@ -1,4 +1,5 @@
-from tkinter import (Tk, Menu, ttk, messagebox)
+from tkinter import Menu, Tk, messagebox, ttk
+
 from PdfTab import PdfTab
 from TextTab import TextTab
 
@@ -23,11 +24,17 @@ filemenu.add_command(label="Quit", command=root.destroy)
 
 helpmenu = Menu(topmenu, tearoff=0)
 topmenu.add_cascade(label="Help", menu=helpmenu)
-helpmenu.add_command(label="Instructions", command=lambda: messagebox.showinfo(
-    "Instructions", "Hello"))
+helpmenu.add_command(
+    label="Instructions", command=lambda: messagebox.showinfo("Instructions", "Hello")
+)
 helpmenu.add_separator()
-helpmenu.add_command(label="About", command=lambda: messagebox.showinfo(
-    "About", "Hi there! My name is Dhruti and I'm currently pursuing 3rd year of my Engineering. I developed this mini project using Python."))
+helpmenu.add_command(
+    label="About",
+    command=lambda: messagebox.showinfo(
+        "About",
+        "Hi there! My name is Dhruti and I'm currently pursuing 3rd year of my Engineering. I developed this mini project using Python.",
+    ),
+)
 root.config(menu=topmenu)
 
 # Menu Bar close-------------------------------------------

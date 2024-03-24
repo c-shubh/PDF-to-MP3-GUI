@@ -1,7 +1,10 @@
-from pdfminer.high_level import extract_text
-import pyttsx3
 import os
+import subprocess
+import sys
+
 import Constants
+import pyttsx3
+from pdfminer.high_level import extract_text
 
 
 class Model:
@@ -29,12 +32,15 @@ class Model:
         """
         engine = pyttsx3.init()
 
-        engine.setProperty('voice', {
-            Constants.FEMALE_VOICE: r'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_ZIRA_11.0',
-            Constants.MALE_VOICE: r'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_DAVID_11.0'
-        }[voice])
+        engine.setProperty(
+            "voice",
+            {
+                Constants.FEMALE_VOICE: r"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_ZIRA_11.0",
+                Constants.MALE_VOICE: r"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_DAVID_11.0",
+            }[voice],
+        )
 
-        engine.setProperty('rate', rate)
+        engine.setProperty("rate", rate)
 
         engine.save_to_file(textData, targetPath)
         engine.runAndWait()
@@ -55,4 +61,8 @@ class Model:
 
         returns: void
         """
-        os.startfile(filePath)
+        if sys.platform == "win32":
+            os.startfile(filePath)
+        else:
+            opener = "open" if sys.platform == "darwin" else "xdg-open"
+            subprocess.call([opener, filePath])
